@@ -76,7 +76,7 @@
   // Create popup header
   const header = document.createElement('div');
   header.className = 'cw-popup-header';
-  header.innerText = '×'; // Close button
+  header.innerText = '×'; // Close button inside popup
   popup.appendChild(header);
 
   // Create iframe
@@ -88,13 +88,17 @@
   document.body.appendChild(container);
   document.body.appendChild(popup);
 
-  // Event listeners
-  button.addEventListener('click', () => {
-    popup.style.display = 'block';
-  });
+  // Toggle function
+  function togglePopup() {
+    if (popup.style.display === 'block') {
+      popup.style.display = 'none';
+    } else {
+      popup.style.display = 'block';
+    }
+  }
 
-  header.addEventListener('click', () => {
-    popup.style.display = 'none';
-  });
+  // Event listeners
+  button.addEventListener('click', togglePopup);
+  header.addEventListener('click', togglePopup);
 
 })();

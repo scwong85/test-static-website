@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Static Website A</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Static Website A</h1>
+  <p>This is a simple static website. The chat widget is loaded at the bottom right corner.</p>
+
+  <!-- Config for chat widget -->
+  <script>
+    window.ChatWidgetConfig = {
+      iframeUrl: 'https://scwong85.github.io/test_openai_chat/frontend/index.html',  // Replace with your Static Website B URL
+      widgetColor: '#4CAF50',
+      popupWidth: 400,
+      popupHeight: 600,
+      positionBottom: 20,
+      positionRight: 20
+    };
+  </script>
+
+  <!-- Include the widget -->
+  <script src="chat-widget.js"></script>
+
+</body>
+</html>
